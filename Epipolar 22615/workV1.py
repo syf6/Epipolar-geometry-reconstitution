@@ -66,10 +66,10 @@ for i in range(25):
 
 #step 2: find the fundamental matrix with cv2.findFundamentalMat() of 2 images
 # Define the object points and image points, the points are stored in an array
-objpoints = np.zeros((chessboard_size[0]*chessboard_size[1], 3), np.float32)
-objpoints[:,:2] = np.mgrid[0:chessboard_size[0], 0:chessboard_size[1]].T.reshape(-1,2)
-imgpointsRight = [cornersRight1, cornersRight2, cornersRight3, cornersRight4]
-imgpointsLeft = [cornersLeft1, cornersLeft2, cornersLeft3, cornersLeft4]
+#objpoints = np.zeros((chessboard_size[0]*chessboard_size[1], 3), np.float32)
+#objpoints[:,:2] = np.mgrid[0:chessboard_size[0], 0:chessboard_size[1]].T.reshape(-1,2)
+#imgpointsRight = [cornersRight1, cornersRight2, cornersRight3, cornersRight4]
+#imgpointsLeft = [cornersLeft1, cornersLeft2, cornersLeft3, cornersLeft4]
 
 # Compute the fundamental matrix
 F, mask = cv2.findFundamentalMat(imgpointsLeft, imgpointsRight, cv2.FM_8POINT)
